@@ -49,14 +49,8 @@ class App extends React.Component<{},IState> {//component = piece of UI
   }
 
   addTodoOnEnter = event => {
-    if(event.key == 'Enter' ) {
-      let uppDatedTodoList = this.state.todoList;//actual list
-      uppDatedTodoList.push(this.state.todoInputVal);//push = appendChild of the input
-      this.setState({todoList: uppDatedTodoList});//set the todolist array to the input text
-      this.setState({todoInputVal: ''});
-    }
+    if(event.key == 'Enter' ) this.onInputSubmit();
   }
-
   //object.method() "this." will work
   //functtion() "this." will not wor
 
