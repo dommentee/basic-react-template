@@ -2,6 +2,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
 }
 //main app component
 .main {
@@ -9,7 +10,7 @@ body {
   padding: 10px;
 }
 .input-todo-wrap {
-  width: 22%;
+  width: 25%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -19,18 +20,27 @@ body {
     width: 200px;
     padding: 5px;
   }
-  button {
+  .Button {
     border-radius: 0;
+    margin: 0 0 0 20px;
+  }
+}
+.num-of-todo {
+  width: 35%;
+  margin: 10px auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+
+
+  p {
+    margin: 0 10px 0 0;
+
   }
 }
 .todo-list {
   width: 35%;
   margin: 0 auto;
-
-  p {
-    text-align: center;
-    color:grey;
-  }
 
   ul {
     list-style-type: none;
@@ -42,9 +52,16 @@ body {
       padding: 8px 5px;
       margin: 0 0 4px 0;
       border: 1.5px solid grey;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       
     }
   }
+}
+
+#delete {
+  
 }
 
 //header in the Title component
