@@ -11,7 +11,6 @@ import 'antd/dist/antd.css'
 interface IState {//outline of the data
   todoList: string[]//string array = to array
   todoInputVal: string
-  counter: number
 }
 
 
@@ -22,7 +21,6 @@ class App extends React.Component<{},IState> {//component = piece of UI
     this.state = {//state = data we want displayed when the componet is rendered
       todoList: Cookies.getJSON('todoList') ? Cookies.getJSON('todoList') : [], //un load or reload of page will check for cookies if noe return empty erray
       todoInputVal: '',
-      counter: Cookies.getJSON('count') ? Cookies.getJSON('count') : 0,
     }
   }
 
@@ -76,7 +74,6 @@ class App extends React.Component<{},IState> {//component = piece of UI
       // }
     });
     this.setState({ todoList }); 
-    this.setState({ counter: this.state.counter -1 && todoList.length});
   }
 
   render() {// responsible for describing what the UI should look like
